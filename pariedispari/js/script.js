@@ -1,7 +1,7 @@
 // L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
 const scelta = prompt('Digita 1 per pari e 2 per dispari');
     //Controlliamo la scelta dell'utente
-    if(scelta === 1) {
+    if(scelta == 1) {
         console.log('Pari');
     } else if(scelta == 2) {
         console.log('dispari');
@@ -29,6 +29,9 @@ if (numero >= 1 && numero <= 5) {
     // Generare un numero random
     const numeroRandom = generaNumeroRandom();
 
+    //Diachiarare la somma
+    const somma = sommaNumeri(numero, numeroRandom);
+
     // Mostrare i risultati
     console.log('Numero inserito dall\'utente:', numero);
     console.log('Numero random generato:', numeroRandom);
@@ -36,13 +39,22 @@ if (numero >= 1 && numero <= 5) {
 
     // Mostrare la somma all'utente
     alert('La somma del tuo numero e del numero generato è: ' + somma);
+
+    // In base alla scelta verificare se la somma corrisponde alla selezione.
+    if(scelta == 1 && somma % 2 == 0) {
+        console.log('hai vinto');
+    } else if(scelta == 2 && somma % 2 !== 0) {
+        console.log('hai vinto');
+    } else {
+        console.log('hai perso');
+    }
+// Dichiariamo chi ha vinto.
+
+
 } else {
     alert('Per favore, inserisci un numero valido compreso tra 1 e 5.');
 }
 
-// Sommiamo i due numeri Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 
 
-// Dichiariamo chi ha vinto.
-    
-    //Se la scelta è = alla somma dei due numeri il giocatore ha vinto, altrimenti no.
+
