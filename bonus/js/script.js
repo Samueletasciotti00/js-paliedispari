@@ -54,7 +54,3 @@ if (numero >= 1 && numero <= 5) {
 } else {
     alert('Per favore, inserisci un numero valido compreso tra 1 e 5.');
 }
-
-
-
-
